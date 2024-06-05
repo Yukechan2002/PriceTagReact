@@ -1,8 +1,49 @@
-# React + Vite
+# Card Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The Card component is a reusable UI element designed to display information in a card-like layout. It is composed of a header section, a body section, and a button at the bottom.
 
-Currently, two official plugins are available:
+## Props
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The Card component accepts the following props:
+
+- **user**: An object containing information about the card. It should have the following properties:
+  - **head**: The title of the card.
+  - **price**: The price of the card.
+  - **user**: The type of user.
+  - **id**: An identifier for special cases. Set to `0` or `1` for specific styling.
+
+## Styling
+
+The Card component comes with pre-defined styles in the `Card.css` file. You can customize the styles by modifying this file to suit your needs.
+
+## Components
+
+The Card component is composed of the following sub-components:
+
+- **Header**: Displays the title and price of the card.
+- **Body**: Contains the content of the card, such as user information and features.
+- **Button**: A button at the bottom of the card.
+
+## Example Usage
+
+```jsx
+import React from 'react';
+import Card from './Card';
+import './Card.css';
+
+const user = {
+  head: 'Premium Plan',
+  price: '$29.99',
+  user: 'Pro User',
+  id: 1,
+};
+
+function App() {
+  return (
+    <div className="App">
+      <Card user={user} />
+    </div>
+  );
+}
+
+export default App;
