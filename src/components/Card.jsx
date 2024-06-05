@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Card.css'
 const Card = (props) => {
   return (
     <div className="priceCard">
@@ -27,7 +27,7 @@ const Card = (props) => {
           <span> Community Access</span>
         </div>
 
-        <div className={`content ${props.user.id == 0 ? "light-content" : ''}`}>
+        <div className={`content ${props.user.id == 0 ? "light-content" : ""}`}>
           {props.user.id === 0 ? (
             <i className="fa fa-times" aria-hidden="true"></i>
           ) : (
@@ -36,7 +36,7 @@ const Card = (props) => {
           <span> Dedicated Phone Support</span>
         </div>
 
-        <div className={`content ${props.user.id == 0 ? "light-content" : ''}`}>
+        <div className={`content ${props.user.id == 0 ? "light-content" : ""}`}>
           {props.user.id === 0 ? (
             <i className="fa fa-times" aria-hidden="true"></i>
           ) : (
@@ -45,7 +45,7 @@ const Card = (props) => {
           <span> Free Subdomain</span>
         </div>
 
-        <div className={`content ${props.user.id == 0 ? "light-content" : ''}`}>
+        <div className={`content ${props.user.id == 2 ? "" : "light-content"}`}>
           {props.user.id === 2 ? (
             <i className="fa fa-check" aria-hidden="true"></i>
           ) : (
@@ -56,9 +56,9 @@ const Card = (props) => {
 
         <div className="btn">
           {props.user.id === 2 ? (
-            <button className="button light-button">Button</button>
-          ) : (
             <button className="button">Button</button>
+          ) : (
+            <button className="button light-button">Button</button>
           )}
         </div>
       </div>
